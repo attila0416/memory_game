@@ -1,0 +1,63 @@
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    transition: 0.8s;
+}
+
+@media only screen and (min-width: 390px) {
+    .board {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .board {
+        height: 800px;
+        width: 800px;
+    }
+}
+
+.card {
+    --numberOfRows: 3;
+    height: calc(calc(100% / 3) - 20px);
+    width: calc(calc(100% / 4) - 20px);;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+    transform: scale(1);
+    background-color: white;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.card p {
+    font-size: 35pt;
+}
+
+.card:hover {
+    transform: scale(0.95);
+    box-shadow: rgba(99, 99, 99, 0.7) 0 2px 8px 0;
+}
+
+.card:active {
+    transform: scale(0.9);
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card_back, .card_front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card_front {
+    transform: rotateY(180deg);
+}
+
