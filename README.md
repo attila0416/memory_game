@@ -1,6 +1,10 @@
 # Memory Game
 
-![Demonstration gif for the memory card game](demo/demo.mp4)
+![Demonstration gif for the memory card game](demo/demo.gif)
+
+![Picture of the memory card game](demo/demo.png)
+
+![Picture of the memory card game](demo/demo2.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
