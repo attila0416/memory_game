@@ -37,6 +37,11 @@ function resetSelectedCards() {
     secondCard = null
 }
 
+function removeSelectedCardEventListeners() {
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+}
+
 function checkIfCardsMatch() {
     if (firstCard.firstChild.innerText !== secondCard.firstChild.innerText) {
         setTimeout(() => {
@@ -45,6 +50,7 @@ function checkIfCardsMatch() {
             resetSelectedCards()
         }, 1000);
     } else {
+        removeSelectedCardEventListeners()
         resetSelectedCards()
     }
 }
